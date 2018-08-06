@@ -7,6 +7,12 @@ namespace Parcial1_logic
     {
         public static void Main(string[] args)
         {
+
+
+            
+            
+            
+
             //Puede hacer llamados aquí para probar su código, aunque se recomienda correr las pruebas.
 
             Console.ReadKey();
@@ -32,7 +38,36 @@ namespace Parcial1_logic
         {
             //NOTA: Para la solución NO SE PERMITE USAR el método ToArray().
 
-            return null;
+            Queue<int> ElementosSacados = new Queue<int>(inputQueue.Count);
+            
+            int Retirado = new int();
+            int Analizado = new int();
+
+            if (inputQueue.Count != 0)
+            {
+
+                for(int i = 0; i < ElementosSacados.Count; i++)
+                {
+
+                
+
+                if(Analizado == lookupValue)
+                {
+                    Analizado = replaceValue;
+                    inputQueue.Dequeue();
+                    ElementosSacados.Enqueue(Analizado);
+                }
+                else
+                {
+                    inputQueue.Dequeue();
+                    ElementosSacados.Enqueue(Retirado);
+                }
+
+                }
+            }
+
+
+            return ElementosSacados;
         }
 
         /// <summary>
@@ -43,7 +78,15 @@ namespace Parcial1_logic
         public Stack<string> InverseStack(Stack<string> stack)
         {
             //NOTA: Para la solución NO SE PERMITE USAR el método ToArray().
-            return null;
+
+            Stack<string> resultado = new Stack<string>(stack.Count);
+
+            string ElementoMovido;
+
+            ElementoMovido = stack.Pop();
+            resultado.Push(ElementoMovido);
+
+            return stack;
         }
 
         /// <summary>
@@ -56,7 +99,40 @@ namespace Parcial1_logic
         public List<string> MixData(Stack<string> stack, Queue<string> queue)
         {
             //NOTA: Para la solución NO SE PERMITE USAR el método ToArray().
-            return null;
+
+            List<string> resultado = new List<string>(stack.Count + queue.Count);
+
+            if(stack.Count != 0)
+            {
+                if (queue.Count != 0)
+                {
+                    string ElementoPila;
+                    string ElementoCola;
+
+                    ElementoPila = stack.Pop();
+                    ElementoCola = queue.Dequeue();
+
+                    int i = 0;
+
+                        while(i<stack.Count + queue.Count)
+                        {
+                            resultado[i] = ElementoPila;
+                        i = i + 2;
+                        }
+
+                    int j = 1;
+
+                    while(j<stack.Count + queue.Count)
+                    {
+                        resultado[j] = ElementoPila;
+                        j = j + 2;
+                    }
+
+
+                }
+            }
+
+            return resultado;
         }
 
         /// <summary>
