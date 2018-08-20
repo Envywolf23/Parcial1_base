@@ -1,0 +1,23 @@
+Feedback:
+
+1. Estructuras de datos. (0.3/2.5)
+ * Ninguna prueba tiene éxito.
+ * ReplaceInQueue() NUNCA va a funcionar. Se está haciendo un 'for' hasta que '0 = 0', lo que ocurre en la primera validación y nunca entra al ciclo. (0.0/0.625)
+ *  InverseStack() solo hace la operación una única vez. (0.2/0.625) 
+ * MixData entrega una estructura de tamaño diferente a la pedida. Además, esto lo que hace es meter todos los datos de las estructuras en el resultado, y no lo que se pide (0.1/0.625)
+ * No se presenta propuesta para RepeatedTimesInDictionary())
+ 
+2. OOP (1.0/2.5)
+ * El constructor de Enemy.cs es incorrecto.
+ * El modificador ParamMod de Gear.cs solo afectaría a una instancia. El enunciado pedía que fuera para todas las instancias.
+ * El constructor de Gear.cs con parámetro boolean no tiene sentido. Para qué quiero saber esto en un boolean si para eso están las subclases?
+ * Hero.cs tiene errores de compilación en la función Equip()
+ * Actor.Move() no necesita recibir un parámetro. A fin de cuentas este va a retornar el valor que parece estar recibiendo como parámetro.
+ * Ojo a sentencias "int val = new int()". Los enteros son tipos de datos primitivos.
+ * Weapon.cs con errores de compilación.
+ * Faltó constructor en Hero.cs
+ * Actor.Move() no debe ser virtual, sino abstracta, porque solo las subclases saben cómo implementarla.
+ * Actor.enableAttack está bien definido, pero no soluciona nada del enunciado. Para los NPC, simplemente no se tienen parámetros asociados al combate.
+ 
+ 
+ TOTAL: 1.3 / 5.0
